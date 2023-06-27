@@ -1,0 +1,7 @@
+﻿  glview.cpp
+  QtWidgetsApplication.cpp
+  main.cpp
+  qrc_QtWidgetsApplication.cpp
+  moc_QtWidgetsApplication.cpp
+  moc_glview.cpp
+  QtWidgetsApplication.vcxproj -> E:\vs2017\QtWidgetsApplication\x64\Release\QtWidgetsApplication.exe
