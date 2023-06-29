@@ -19,6 +19,20 @@ GLview::GLview(QWidget *parent): QOpenGLWidget(parent)
 GLview::~GLview()
 {}
 
+void GLview::onDataImport()
+{
+	std::ifstream fin("C:\\Users\\Y05895\\Desktop\\3D综合数据.asc");
+	if (!fin)
+	{
+		return;
+	}
+	while (!fin.eof())
+	{
+
+	}
+
+}
+
 void GLview::initializeGL()
 {
 	//step 1.初始化，指向OpenGL函数.
@@ -29,6 +43,8 @@ void GLview::initializeGL()
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_POINT_SMOOTH);
 	glPointSize(3.0);
+
+	
 }
 
 void GLview::resizeGL(int w, int h)
@@ -139,29 +155,15 @@ void GLview::paintGL()
 	drawCube();
 	//glBegin(GL_POINTS);
 	//{
-	//	glVertex3f(0.0, 0.0, 0.0);
-	//	glVertex3f(0.0, 1.0, 0.0);
-	//	glVertex3f(0.0, 2.0, 0.0);
-	//	glVertex3f(0.0, 3.0, 0.0);
 
-	//	glVertex3f(0.0, 0.0, 0.0);
-	//	glVertex3f(1.0, 0.0, 0.0);
-	//	glVertex3f(2.0, 0.0, 0.0);
-	//	glVertex3f(3.0, 0.0, 0.0);
+	//	{
+	//		
+	//		glVertex3f(0.0, -3.0, 0.0);
+	//	}
 
-	//	//glColor3f(1, 0, 0);
-	//	glVertex3f(0.0, 0.0, 0.0);
-	//	glVertex3f(-1.0, 0.0, 0.0);
-	//	glVertex3f(-2.0, 0.0, 0.0);
-	//	glVertex3f(-3.0, 0.0, 0.0);
-
-	//	glVertex3f(0.0, 0.0, 0.0);
-	//	glVertex3f(0.0, -1.0, 0.0);
-	//	glVertex3f(0.0, -2.0, 0.0);
-	//	glVertex3f(0.0, -3.0, 0.0);
 	//}
-	////结束绘制
-	//glEnd();
+	//结束绘制
+	glEnd();
 	glPopMatrix();
 }
 

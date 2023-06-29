@@ -14,6 +14,9 @@ public:
 	GLview(QWidget *parent);
 	~GLview();
 
+public slots:
+	void onDataImport();
+
 protected:
 	void initializeGL();
 	void resizeGL(int w, int h);
